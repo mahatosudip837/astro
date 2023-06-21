@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.header{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url('./images/univars.jpg') no-repeat center / cover;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.header.z-index{
+    z-index: 3;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: -1;
+    opacity: .5;
+}
+.header-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    gap: 30px;
+    z-index: 10;
+    transition: all .5s ease;
+}
+.header-container.active{
+    padding: 10px 7%;
+    background: #000;
+}
+.home-section{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s ease;
+    z-index: 100;
+}
+.home-section.active{
+    left: 0;
+    background: #000;
+}
+.home-section a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: all .5s ease;
+}
+.home-section a:hover{
+    color: #f75a00;
+}
+.home-section .close{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    cursor: pointer;
+}
+.home-section .close .close-icon{
+    font-size: 30px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.menu-icon{
+    text-align: center;
+    cursor: pointer;
+}
+.menu-icon i{
+    color: #fff;
+    font-size: 35px;
+    width: 100%;
+}
+.menu-icon p{
+    text-transform: uppercase;
+    font-size: 14px;
+    object-fit: fill;
+}
+.logo h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.logo h1 span{
+    color: rgb(236, 162, 0);
+    font-weight: 300;
+}
+.call i{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid rgb(0, 110, 255);
+}
+.call span{
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+.main-title{
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+.main-title h1{
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 78px;
+}
+.main-title p{
+    width: 92%;
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 1.7;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #f75a00;
+    margin-top: 15px;
+    border-radius: 30px;
+}
+.btn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+.right-title{
+    padding: 20px 40px;
+    position: absolute;
+    top: 24%;
+    width: 240px;
+    right: 10%;
+    background: #000;
+    border-radius: 10px;
+    text-align: center;
+}
+.right-title img{
+    height: 100px;
+    width: 100px;
+    margin: 10px 0;
+}
+.right-title p{
+    color: rgb(255, 238, 0);
+    margin: 10px 0;
+}
+.btn2{
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid #f75a00;
+    outline: none;
+    transition: all .5s ease;
+}
+.btn2 a{
+    text-decoration: none;
+    color: #fff;
+}
+.left-arroy{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    cursor: pointer;
+}
+.left-arroy i,.right-arroy i{
+    color: rgb(165, 9, 255);
+    font-size: 25px;
+}
+.right-arroy{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+}
+.next-button{
+    position: absolute;
+    bottom: 30px;
+    left: 15%;
+    display: flex;
+}
+.next-button div.active{
+    background: #fff;
+    width: 50px;
+}
+.next-button div{
+    height: 3px;
+    border-radius: 30px;
+    width: 30px;
+    background: #b4b0b0;
+    margin-right: 5px;
+}
+/* -----------services-------- */
+main{
+    background: rgb(231, 210, 210);
+    display: flex;
+    flex-direction: column;
+}
+#services{
+    position: relative;
+    align-self: flex-end;
+    width: 96%;
+    position: relative;
+    top: -20px;
+    background: rgb(248, 228, 228);
+    text-align: center;
+    padding: 30px 80px 70px;
+    z-index: 2;
+}
+.title{
+    margin-bottom: 20px;
+}
+.title h1{
+    font-size: 3rem;
+}
+.btn3{
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 20px;
+}
+.btn.active{
+    padding: 10px 50px;
+    font-size: 15px;
+}
+.btn3 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+.services-card{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px;
+
+}
+.services-card .card{
+    background: #fff;
+    height: 300px;
+}
+.services-card .card img{
+    height: 80%;
+    width: 100%;
+}
+.services-card .card h1{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.chat-bot{
+    position: fixed;
+    z-index: 100;
+    top: 90%;
+    right: 6%;
+    display: flex;
+    gap: 10px;
+}
+.chat-bot h1{
+    font-size: 12px;
+    background: #fff;
+    padding: 10px 15px;
+    text-align: left;
+}
+.chat-bot .chat-bot-icon .chat-icon{
+    background: rgb(128, 13, 128);
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    color: #fff;
+}
+.left-arroy.active,.right-arroy.active{
+    padding: 10px;
+    background: #000;
+    top: 43%;
+}
+.left-arroy.active i,.right-arroy.active i{
+    color: #fff;
+}
+.left-arroy.active.active2{
+    background: #cfc9c9;
+}
+/* --------astrologers---------- */
+#astrologers{
+    text-align: center;
+}
+.astro-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+.astro-card .card{
+    flex: 0 0 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+.astro-card .card img{
+    border: 5px solid #fff;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.astro-card .card p{
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.btn2.active a{
+    color: #000;
+}
+.title.active2{
+    background: rgba(68, 68, 94, 0.938);
+    width: 350px;
+    height: 150px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 44% 56% 48% 52% / 55% 52% 48% 45% ;
+}
+/* ----------shop online ------------ */
+#shop-online{
+    text-align: center;
+    padding: 60px 0;
+    background: rgb(11, 11, 92);
+}
+.title.active h1{
+    color: #fff;
+}
+.btn3.active a{
+    color: #fff;
+}
+.gem{
+    padding: 30px 0;
+    position: relative;
+}
+.gem-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.gem-card .card{
+    border-right: 1px solid #000;
+    flex: 0 0 250px;
+    background: #fff;
+    padding: 30px 0;
+}
+.gem-card .card img{
+    height: 100px ;
+    width: 100px;
+}
+.gem-card .card h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+.gem-card .card p{
+    font-size: 12px;
+    color: red;
+    margin: 10px 0;
+}
+.left-arroy.new{
+    left: 11.7%;
+}
+.right-arroy.new{
+    right: 11.5%;
+}
+.btn2:hover{
+    background: rgb(77, 3, 146);
+    border: 2px solid transparent;
+}
+.btn2:hover a{
+    color: #fff;
+}
+.btn2.new{
+    background: rgb(77, 3, 146);
+    border: 2px solid transparent;
+}
+.btn2.new a{
+    color: #fff;
+}
+/* -----footer--- */
+#footer{
+    padding: 60px 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+#footer .card{
+    flex: 0 0 300px;
+}
+#footer .card a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+#footer .card .contact i{
+    color: #fff;
+    font-size: 15px;
+}
+#footer .card .contact span{
+    color: #fff;
+    font-size: 15px;
+}
+#footer .card h1{
+    color: #fff;
+    font-size: 16px;
+}
+#footer .card .social{
+    display: flex;
+    gap: 10px;
+}
+#footer .card .social i{
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+@media screen and (max-width:992px){
+    .header{
+        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-title{
+        position: relative;
+        left: 0;
+        margin: 140px 0 20px;
+    }
+    .right-title{
+        position: relative;
+        right: 0;
+    }
+    .home-section{
+        width: 50%;
+    }
+    .left-arroy.active, .right-arroy.active{
+        display: none;
+    }
+    .main-title h1{
+        font-size: 4rem;
+    }
+    .btn a{
+        font-size: 14px;
+    }
+   
+}
+@media screen and (max-width:640px){
+    #services{
+        align-self: center;
+    }
+    .logo h1{
+        font-size: 30px;
+    }
+    .main-title h1{
+        font-size: 3rem;
+        line-height: 1;
+    }
+    .astro-card .card.active{
+        flex: 0 0 250px;
+        flex-direction: column;
+    }
+    .title.active2{
+        width: 300px;
+    }
+}
