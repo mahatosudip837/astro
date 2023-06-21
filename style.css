@@ -488,9 +488,21 @@ main{
     .logo h1{
         font-size: 30px;
     }
+    .main-title{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .main-title h1{
         font-size: 3rem;
         line-height: 1;
+        text-align: center;
+    }
+    .main-title p{
+        width: 50%;
+        text-align: center;
     }
     .astro-card .card.active{
         flex: 0 0 250px;

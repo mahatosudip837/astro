@@ -17,7 +17,7 @@ closeIcon.addEventListener('click',()=>{
 
 window.onscroll = ()=>{
     navbar.classList.remove('active');
-    navfix.classList.toggle('active',window.scrollY>100);
+    navfix.classList.toggle('active',window.scrollY>50);
     header.classList.toggle('z-index',window.scrollY>350);
     services.classList.toggle('active',window.scrollY>350);
     
