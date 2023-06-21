@@ -288,6 +288,7 @@ main{
     text-align: left;
 }
 .chat-bot .chat-bot-icon .chat-icon{
+    cursor: pointer;
     background: rgb(128, 13, 128);
     padding: 10px;
     font-size: 30px;
